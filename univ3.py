@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 
 #x1 is the initial amount of asset 1 and y1 is the initial amount of asset 2 
 #here we assume that both assets have the same value
-x1 = 1381
-y1 = 392.6
+x1 = 1754
+y1 = 32.24
 
 #add the amount that you get for asset 2 after adding 100 of asset 1 in uniswap v3
-a = 117.5
+a = 93.088  
 
 x2 = 100*(x1+y1) / ( 100+a )
 print (x2, "Final amount of asset 1")
@@ -35,9 +35,10 @@ print ("hodl = ", hodl)
 x= np.arange(0.9,1.1,0.00001)
 
  
-pb= 0.99541   #High price
-pa = 0.99303  #Low price
-p= 0.992868   #Current price
+pb= 1.0081   #High price
+pa = 1.0059  #Low price
+p= 1.007   #price of asset when you added liquidity
+pc = 1.0081 #current price
 
 
 
@@ -56,7 +57,7 @@ def ILV3(x):
 plt.plot(x,ILV3(x))
 plt.plot(pa,ILV3(pa),marker='o')
 plt.plot(pb,ILV3(pb),marker='o')
-print("Your impermanent loss in percentage is:", ILV3(p))
+print("Your impermanent loss in percentage is:", ILV3(pc))
 #plt.plot(x,ILV2)
 plt.ylim([-1,0])
 
