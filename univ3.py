@@ -62,9 +62,7 @@ print("Your impermanent loss in percentage is:", ILV3(pc))
 plt.ylim([-1,0])
 
 
-#Weth usdc position
-weth = 0.3223796 ## at 3258.91
-usdc = 89.5
+
 
 
 
